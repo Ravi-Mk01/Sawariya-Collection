@@ -1,0 +1,204 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fdfcf8;
+  /* Cream background */
+  color: #464545;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #f6f4f0;
+  box-shadow: 0 4px 15px rgba(219, 14, 14, 0.05);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9f3f04 !important;
+  /* Main theme color */
+  transition: 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #e25d0b !important;
+  /* Hover color */
+}
+
+.navbar .nav-link {
+  color: #9f3f04 !important;
+  /* Same as brand/heading */
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #e25d0b !important;
+  /* Hover same as buttons */
+  font-weight: 500;
+}
+
+/* Cream button */
+.btn-cream {
+  background-color: #f5e6d3;
+  color: #5a3e2b;
+  border-radius: 30px;
+  padding: 6px 18px;
+  transition: 0.3s ease;
+}
+
+.btn-cream:hover {
+  background-color: #e6d2b3;
+  color: #3d281b;
+}
+
+/* Outline brown */
+.btn-outline-brown {
+  border: 2px solid #5a3e2b;
+  color: #5a3e2b;
+  border-radius: 30px;
+  padding: 6px 18px;
+  transition: 0.3s ease;
+}
+
+.btn-outline-brown:hover {
+  background-color: #5a3e2b;
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(rgba(249, 246, 246, 0.8), rgba(235, 234, 232, 0.9)),
+    url("https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 12px;
+  margin: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #9f3f04;
+  /* Same as navbar */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #4c4b4b;
+}
+
+
+/* ===== Category Card Hover ===== */
+.category-card {
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+  height: 400px;
+  /* height thoda fix kiya - 800px bahut zyada tha */
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+  /* Zoom effect like featured products */
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===== Buttons ===== */
+.btn-cream,
+.btn-outline-brown,
+.btn-custom {
+  border: 2px solid #9f3f04;
+  background: transparent;
+  color: #9f3f04;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-cream:hover,
+.btn-outline-brown:hover,
+.btn-custom:hover {
+  background-color: #e25d0b;
+  border-color: #e25d0b;
+  color: #fff;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Card Images */
+.category-card img {
+  height: 800px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #f6f4f0;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

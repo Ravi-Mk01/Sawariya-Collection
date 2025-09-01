@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NANCY KIDS WEAR</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== General ===== */
+    body {
+      background-color: #fffaf3;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== Theme Colors ===== */
+    :root {
+      --primary-color: #9f3f04;
+      --hover-color: #e25d0b;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--primary-color) !important;
+      transition: 0.3s;
+    }
+
+    .navbar-brand:hover {
+      color: var(--hover-color) !important;
+    }
+
+    .nav-link {
+      color: var(--primary-color) !important;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--hover-color) !important;
+      font-weight: 500;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 5px rgba(24, 2, 2, 0.4);
+    }
+
+    /* ===== Section Headings ===== */
+    h2.section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    /* ===== Product / Category Cards ===== */
+    .product-card,
+    .category-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-card:hover,
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img,
+    .category-card img {
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      height: 320px;
+      width: 100%;
+    }
+
+    .product-card:hover img,
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ===== Button ===== */
+    .btn-custom {
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 25px;
+      padding: 8px 20px;
+      transition: 0.3s;
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-custom:hover {
+      background-color: var(--hover-color);
+      border-color: var(--hover-color);
+      color: #fff;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #fff;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top creamy-nav">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-uppercase" href="index.html">SANWARIYA COLLECTION</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="kids.html">Kids</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">All Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- 🔹 Login & Signup Buttons -->
+      <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+        <a href="longin.html" class="btn btn-outline-brown me-2 hover-lift">Login</a>
+        <a href="signup.html" class="btn btn-cream hover-lift">Signup</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero position-relative">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source
+        src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/S9E7vQXo9l59qs7ny/videoblocks-264z_16136_lib23_210_b2r4a08op__889e2c08c5033a466a330d576f71d3af__P360.mp4"
+        type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1>Kids's Collection</h1>
+      <p>Discover the latest styles for Kids</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4" style="color:#5a3e2b;">Latest Kids Wear</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT73DGOZgnPMK1UxyEgimNF1TwWvREE9hj8b5a2j4ECFobBcEkL6Zaa_e8uJHTRvZqE5JZ4-8GA299qaTl-pfzpsDt4D0b6aRy3hi3SEyA"
+            class="card-img-top" alt="Kids Dress">
+          <div class="card-body text-center">
+            <h5>Colorful Dress</h5>
+            <p>Price: &#8377; 1999</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://shoeplanet.btrac.in/wp-content/uploads/2025/02/WhatsApp_Image_2024-09-06_at_09.55.28_1.jpg"
+            class="card-img-top" alt="Kids Shoes">
+          <div class="card-body text-center">
+            <h5>Kids Shoes</h5>
+            <p>Price: &#8377; 1199</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://image.hm.com/assets/hm/a5/8d/a58d1dc7d6006d53744390bcfc1f2e4a1aeba1c2.jpg?imwidth=768"
+            class="card-img-top" alt="Kids Shoes">
+          <div class="card-body text-center">
+            <h5>3-piece cotton se</h5>
+            <p>Price: &#8377; 2199</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://image.hm.com/assets/hm/a7/c2/a7c21562fe03658f8573c9a4e7cb829aa00854b4.jpg?imwidth=768"
+            class="card-img-top" alt="Twill joggers">
+          <div class="card-body text-center">
+            <h5>Twill joggers</h5>
+            <p>Price: &#8377; 699</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://image.hm.com/assets/hm/80/70/807023adb5a0c83fc1f9cec1d4d795158bb57ada.jpg?imwidth=768"
+            class="card-img-top" alt="Kids Shoes">
+          <div class="card-body text-center">
+            <h5>2-piece set with braces</h5>
+            <p>Price: &#8377; 1799</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://m.media-amazon.com/images/I/51sGck+ULIL._SR290,290_.jpg" class="card-img-top"
+            alt="Kids Jacket">
+          <div class="card-body text-center">
+            <h5>Warm Jacket</h5>
+            <p>Price: &#8377; 1999</p>
+            <a href="#" class="btn btn-custom">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NANCY KIDS WEAR | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
